@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ignitesummit'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    implementation 'org.apache.ignite:ignite-core:2.12.0'
+    implementation 'org.apache.ignite:ignite-spring:2.12.0'
+    implementation 'org.apache.ignite:ignite-log4j:2.12.0'
+
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

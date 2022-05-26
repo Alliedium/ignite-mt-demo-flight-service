@@ -1,0 +1,12 @@
+FROM apacheignite/ignite:2.12.0
+ARG IGNITE_DOCKER_JVM_OPTS
+
+COPY ./src/main/resources/server.xml /app/config/
+
+ENV IGNITE_DOCKER_JVM_OPTS="-Xms1024m -Xmx2048m -XX:+UseG1GC $IGNITE_DOCKER_JVM_OPTS"
+ENV IGNITE_QUIET=false
+ENV IGNITE_HOST=ignite
+ENV CONFIG_URI=/app/config/server.xml
+ENV JVM_OPTS="$JVM_OPTS -Djava.net.preferIPv4Stack=true"
+
+CMD export JVM_OPTS="$JVM_OPTS $IGNITE_DOCKER_JVM_OPTS" && $IGNITE_HOME/run.sh

@@ -1,0 +1,9 @@
+backup
+build
+.gradle
+.idea
+commands.txt
+logs
+ignite/work
+patchedData
+*.jar

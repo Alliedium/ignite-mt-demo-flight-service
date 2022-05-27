@@ -19,6 +19,8 @@ dependencies {
 
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
+    implementation 'io.github.alliedium.ignite.migration:patchtools:0.0.2'
+
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'

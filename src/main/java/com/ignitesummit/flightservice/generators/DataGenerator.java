@@ -23,7 +23,7 @@ public class DataGenerator {
     }
 
     public static FlightProfit generateFlightProfit(Flight flight) {
-        return new FlightProfit(flight.getId(), faker.random().nextInt(100, 500), faker.random().nextInt(350, 600));
+        return new FlightProfit(flight.getId(), faker.random().nextInt(100, 500), faker.random().nextInt(350, 600), flight.getPassengerList().size());
     }
 
     private static List<Passenger> generatePassengers() {
